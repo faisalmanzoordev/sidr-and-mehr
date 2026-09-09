@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app\\fragrances\\[slug]",
+    "\\src\\components",
+    "\\src\\components\\layout"
+  ],
+  "SelectedNode": "\\src\\components\\layout\\Navbar.tsx",
+  "PreviewInSolutionExplorer": false
+}

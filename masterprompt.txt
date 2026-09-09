@@ -1,0 +1,1101 @@
+You are a senior luxury-brand UI/UX designer and senior Next.js engineer.
+
+I want you to build a COMPLETE, PRODUCTION-QUALITY WEBSITE for my new luxury fragrance and lifestyle brand:
+
+BRAND NAME:
+SIDR & MEHR
+
+TAGLINE:
+TIMELESS. DISTINCT. UNMISTAKABLE.
+
+SECONDARY BRAND LINE:
+Fragrance · Accessories · LifeStyle
+
+BRAND PHILOSOPHY:
+Rooted in tradition, made for today.
+
+==================================================
+1. PROJECT PURPOSE
+==================================================
+
+This is the first official website for SIDR & MEHR.
+
+The brand is starting with premium fragrances and may later expand into accessories such as caps and other lifestyle products.
+
+For the initial launch, the website should primarily showcase and sell fragrances.
+
+IMPORTANT:
+
+This is NOT a generic perfume website.
+
+It should feel like a REAL premium emerging luxury brand website.
+
+The visual quality should be comparable in feel to modern premium fragrance, fashion and lifestyle brands.
+
+The website must feel:
+
+- Premium
+- Modern
+- Elegant
+- Minimal
+- Sophisticated
+- Warm
+- Masculine but not overly masculine
+- Timeless
+- Editorial
+- High-end
+- Trustworthy
+- Visually memorable
+
+Do NOT make it look like:
+
+- A cheap perfume store
+- A generic Shopify template
+- A basic portfolio
+- A simple developer-made website
+- An old-fashioned ecommerce website
+- A website overloaded with animations
+- A website full of cards and borders
+
+The first impression is extremely important.
+
+==================================================
+2. TECHNOLOGY
+==================================================
+
+Use:
+
+- Next.js
+- TypeScript
+- React
+- Tailwind CSS
+- Modern responsive architecture
+- App Router
+
+Use a clean and scalable folder structure.
+
+The project must be easy for another developer to maintain.
+
+DO NOT use .NET/backend yet.
+
+There is NO database.
+
+There is NO authentication.
+
+There is NO payment gateway.
+
+There is NO shopping cart system for this first version.
+
+The website is a premium product showcase with direct WhatsApp ordering. (+92 3237814688)
+
+Later we may add a complete ecommerce backend/API.
+
+For now keep the architecture clean so ecommerce functionality can be added later without rebuilding the entire frontend.
+
+==================================================
+3. VERY IMPORTANT — WEBSITE DESIGN DIRECTION
+==================================================
+
+Do NOT simply create a dark page with text on the left and an image on the right.
+
+The previous generated version looked too basic and developer-like.
+
+I specifically want a visually strong, modern luxury experience.
+
+Use:
+
+- Strong typography
+- Large editorial headlines
+- Beautiful whitespace
+- Elegant gold accents
+- Deep charcoal / near-black backgrounds
+- Warm ivory / cream sections
+- Sophisticated spacing
+- Subtle borders
+- Premium product presentation
+- Editorial layouts
+- Asymmetric sections where appropriate
+- Large visual areas
+- Carefully controlled animations
+- High-quality visual hierarchy
+
+Avoid excessive rounded cards.
+
+Avoid excessive shadows.
+
+Avoid excessive gradients.
+
+Avoid excessive gold everywhere.
+
+Gold should be an ACCENT, not the entire website.
+
+==================================================
+4. BRAND COLORS
+==================================================
+
+Use a refined luxury palette approximately based on:
+
+Primary:
+#11100F
+Deep charcoal / almost black
+
+Secondary:
+#F4EFE7
+Warm ivory / cream
+
+Gold:
+#B88945
+
+Light Gold:
+#D4AF67
+
+Muted Text:
+#A8A29A
+
+White:
+#F8F6F2
+
+You may slightly adjust these values if necessary to achieve a more premium visual result.
+
+The website should primarily alternate between:
+
+- Deep dark luxury sections
+- Warm ivory editorial sections
+
+Do not make the entire website black.
+
+==================================================
+5. LOGO
+==================================================
+
+The official SIDR & MEHR logo already exists.
+
+The design includes:
+
+- SIDR & MEHR monogram
+- Circular emblem
+- Stylized leaves
+- Gold finish
+- SIDR & MEHR wordmark
+- Tagline
+
+The website must support the official logo as an image asset.
+
+DO NOT redesign or recreate the logo using text.
+
+Assume the assets will be placed in:
+
+/public/brand/
+
+Expected assets:
+
+/public/brand/logo-full.png
+/public/brand/monogram.png
+
+If these assets are not present during development, use clearly named placeholders and make the paths easy to replace.
+
+The navbar should normally use the monogram or compact logo.
+
+The footer can use the full logo.
+
+==================================================
+6. WEBSITE STRUCTURE
+==================================================
+
+Create the following pages:
+
+1. Home
+2. Fragrances
+3. About
+4. Contact
+
+Product detail pages should also be supported through a reusable dynamic route:
+
+/fragrances/[slug]
+
+The initial website should be structured so that adding more products later is easy.
+
+==================================================
+7. NAVIGATION
+==================================================
+
+Desktop navigation:
+
+LEFT:
+SIDR & MEHR logo / wordmark
+
+CENTER:
+HOME
+FRAGRANCES
+ABOUT
+CONTACT
+
+RIGHT:
+ORDER ON WHATSAPP
+
+The navigation must be elegant and minimal.
+
+Do not make the navbar huge.
+
+It should feel like a luxury fashion/fragrance website.
+
+On mobile:
+
+- Compact logo/monogram
+- Menu button
+- Clean mobile navigation drawer
+- WhatsApp CTA clearly visible inside menu
+
+Navbar should become sticky after scrolling or remain elegantly fixed if appropriate.
+
+Add subtle transition when scrolling.
+
+==================================================
+8. HERO SECTION
+==================================================
+
+The hero section must be the strongest section of the website.
+
+Do NOT create a basic two-column hero.
+
+Create a premium editorial hero.
+
+Suggested structure:
+
+Small eyebrow:
+
+FRAGRANCE · ACCESSORIES · LIFESTYLE
+
+Large headline:
+
+SIDR
+& MEHR
+
+Supporting tagline:
+
+TIMELESS. DISTINCT. UNMISTAKABLE.
+
+Brand statement:
+
+ROOTED IN TRADITION, MADE FOR TODAY.
+
+Then a short refined description.
+
+The hero should include a strong fragrance/product visual.
+
+Use an AI placeholder image for now.
+
+IMPORTANT:
+
+The placeholder must visually resemble a premium luxury perfume bottle/product photograph.
+
+Do not use generic stock-photo style placeholders.
+
+Create a large cinematic visual area.
+
+The hero should have subtle visual depth and refined motion.
+
+Include one primary CTA:
+
+EXPLORE FRAGRANCES
+
+And one secondary CTA:
+
+ORDER ON WHATSAPP
+
+The hero must look impressive on:
+
+- Desktop
+- Tablet
+- Mobile
+
+==================================================
+9. BRAND STORY
+==================================================
+
+Create a strong editorial "Our Story" section.
+
+The brand story should be based on this concept:
+
+SIDR & MEHR began from a small personal journey around fragrances and retail, growing from a simple physical stall into an ambition to build a refined fragrance and lifestyle brand.
+
+The story should communicate:
+
+- Simplicity
+- Craft
+- Tradition
+- Personal connection
+- Growth
+- Modern presentation
+- Respect for timeless fragrance culture
+
+Do NOT make the story overly dramatic.
+
+Do NOT claim decades of heritage.
+
+Do NOT invent false history.
+
+The brand is young and ambitious.
+
+The writing should feel honest and premium.
+
+==================================================
+10. SIDR MEANING / BRAND CONNECTION
+==================================================
+
+Create a subtle brand philosophy section explaining the connection with SIDR.
+
+Sidr refers to the jujube tree and its leaves.
+
+The visual identity uses leaves as part of the monogram.
+
+Use this connection carefully.
+
+The message should be about:
+
+- Nature
+- Roots
+- Tradition
+- Simplicity
+- Timelessness
+
+Do not make unsupported religious or historical claims.
+
+==================================================
+11. FRAGRANCE COLLECTION
+==================================================
+
+Create a premium fragrance collection section.
+
+Initial collection:
+
+5 fragrances.
+
+At this stage, product names can be temporary placeholders such as:
+
+01 — [Fragrance Name]
+02 — [Fragrance Name]
+03 — [Fragrance Name]
+04 — [Fragrance Name]
+05 — [Fragrance Name]
+
+Do NOT invent elaborate final product names unless clearly marked as placeholders.
+
+Each product should have:
+
+- Product image
+- Product name
+- Short description
+- Fragrance family
+- 50ml
+- Price placeholder
+- View Details
+- Order on WhatsApp
+
+The layout should NOT be a boring 5-card grid.
+
+Use a premium editorial product layout.
+
+Possible design:
+
+- Featured product large
+- Other products arranged asymmetrically
+- Large photography
+- Elegant typography
+- Hover interactions
+- Subtle image movement
+- Product numbering
+
+==================================================
+12. PRODUCT DETAIL PAGE
+==================================================
+
+Create:
+
+/fragrances/[slug]
+
+Product detail page should contain:
+
+- Large product photography
+- Product name
+- Short description
+- Fragrance family
+- Size: 50ml
+- Price
+- Fragrance notes
+- Top notes
+- Heart notes
+- Base notes
+- Product story
+- Order on WhatsApp CTA
+- Related fragrances
+
+Use placeholder product data in a centralized data file.
+
+Do NOT hard-code product data inside UI components.
+
+==================================================
+13. WHATSAPP ORDERING
+==================================================
+
+There is currently NO ecommerce backend.
+
+All orders should go through WhatsApp.
+
+Use this number:
+
++923237814688
+
+IMPORTANT:
+
+Do NOT hard-code this number throughout the project.
+
+Create an environment variable:
+
+NEXT_PUBLIC_WHATSAPP_NUMBER
+
+Use the environment variable everywhere.
+
+Example:
+
+NEXT_PUBLIC_WHATSAPP_NUMBER=923237814688
+
+Convert the Pakistani number into international format when creating WhatsApp links.
+
+Create reusable WhatsApp functionality.
+
+Example behavior:
+
+When a customer clicks:
+
+ORDER ON WHATSAPP
+
+The WhatsApp message should automatically include:
+
+Hello SIDR & MEHR,
+I am interested in:
+[Product Name]
+Size: 50ml
+
+Please share availability and order details.
+
+For general inquiries:
+
+Hello SIDR & MEHR,
+I would like to know more about your fragrances.
+
+Use proper URL encoding.
+
+==================================================
+14. PRODUCTS / DATA ARCHITECTURE
+==================================================
+
+Create a centralized product data file.
+
+For example:
+
+src/data/products.ts
+
+Each product should have fields similar to:
+
+id
+slug
+name
+description
+shortDescription
+price
+size
+category
+fragranceFamily
+topNotes
+heartNotes
+baseNotes
+image
+featured
+
+Make it extremely easy to add product #6 later.
+
+==================================================
+15. ABOUT PAGE
+==================================================
+
+Create a beautiful editorial About page.
+
+Sections:
+
+- Brand introduction
+- Our philosophy
+- The meaning behind SIDR
+- Tradition & modernity
+- Craftsmanship
+- Closing brand statement
+
+Use strong typography and visual storytelling.
+
+Do not create a generic text-heavy About page.
+
+==================================================
+16. CONTACT PAGE
+==================================================
+
+Create a premium contact page.
+
+Include:
+
+- WhatsApp
+- Email placeholder
+- Instagram
+- Facebook
+- TikTok
+- YouTube
+
+Use placeholders for social URLs if necessary.
+
+Include a simple contact/inquiry form visually, but it does NOT need backend functionality yet.
+
+The form can be prepared for future backend integration.
+
+==================================================
+17. FOOTER
+==================================================
+
+Create a premium footer.
+
+Include:
+
+SIDR & MEHR
+
+TIMELESS. DISTINCT. UNMISTAKABLE.
+
+Navigation links
+
+Fragrances
+
+About
+
+Contact
+
+Social links
+
+WhatsApp
+
+Copyright
+
+Keep it elegant and spacious.
+
+==================================================
+18. SOCIAL MEDIA
+==================================================
+
+Brand username:
+
+@sidrmehr
+
+Use this wherever social links are required.
+
+Platforms:
+
+Instagram
+Facebook
+TikTok
+YouTube
+WhatsApp
+
+Do not invent URLs if not known.
+
+Create centralized social configuration so URLs can easily be updated later.
+
+==================================================
+19. IMAGES
+==================================================
+
+Real product photography is NOT ready yet.
+
+Therefore use AI-generated placeholder imagery.
+
+However:
+
+DO NOT use broken image links.
+
+DO NOT display text such as:
+
+"Placeholder photography of a SIDR & MEHR fragrance bottle"
+
+Instead create proper local placeholder image paths such as:
+
+/images/products/fragrance-01.jpg
+
+and make sure the UI works even if real images are not available.
+
+If necessary, use CSS/image placeholders with elegant visual composition.
+
+The image system must be easy to replace later with real product photography.
+
+Use Next.js Image component correctly.
+
+==================================================
+20. ANIMATIONS
+==================================================
+
+Use subtle premium animations.
+
+Examples:
+
+- Hero fade/slide
+- Image reveal
+- Text reveal
+- Smooth hover effects
+- Product image zoom
+- Navbar transition
+- Scroll reveal
+
+Animations must be:
+
+- Smooth
+- Elegant
+- Fast
+- Subtle
+
+DO NOT create flashy animations.
+
+DO NOT make the website feel like a gaming website.
+
+Respect:
+
+prefers-reduced-motion
+
+==================================================
+21. RESPONSIVE DESIGN
+==================================================
+
+This is extremely important.
+
+Design mobile-first.
+
+Test and optimize for:
+
+- 320px
+- 375px
+- 390px
+- 414px
+- 768px
+- 1024px
+- 1280px
+- 1440px
+- 1920px
+
+Nothing should overflow horizontally.
+
+Typography must scale correctly.
+
+Images must never break the layout.
+
+Navigation must work perfectly on mobile.
+
+WhatsApp CTA must remain easily accessible.
+
+==================================================
+22. ACCESSIBILITY
+==================================================
+
+Follow good accessibility practices.
+
+Include:
+
+- Semantic HTML
+- Proper headings
+- Alt text
+- Keyboard navigation
+- Focus states
+- Sufficient contrast
+- Accessible buttons
+- Accessible mobile menu
+
+==================================================
+23. SEO
+==================================================
+
+Implement proper metadata.
+
+Brand:
+
+SIDR & MEHR
+
+Suggested title:
+
+SIDR & MEHR — Timeless. Distinct. Unmistakable.
+
+Description:
+
+SIDR & MEHR is a modern fragrance and lifestyle brand rooted in tradition and made for today.
+
+Include:
+
+- metadata
+- Open Graph metadata
+- favicon support
+- proper page titles
+- semantic headings
+
+Prepare the website for future SEO expansion.
+
+==================================================
+24. PERFORMANCE
+==================================================
+
+The website must be production-quality.
+
+Optimize:
+
+- Images
+- Fonts
+- Components
+- Layout shifts
+- Client-side JavaScript
+
+Avoid unnecessary dependencies.
+
+Do not install libraries unless they provide real value.
+
+==================================================
+25. CODE ARCHITECTURE
+==================================================
+
+Use a clean structure similar to:
+
+src/
+  app/
+  components/
+    layout/
+    ui/
+    sections/
+    products/
+  data/
+  lib/
+  config/
+  types/
+
+public/
+  brand/
+  images/
+    products/
+    editorial/
+
+Create reusable components.
+
+Do not duplicate UI code.
+
+Create:
+
+Navbar
+Footer
+Button
+Container
+SectionHeading
+WhatsAppButton
+ProductCard
+ProductGrid
+Hero
+BrandStory
+FeaturedCollection
+NewsletterSection
+MobileMenu
+
+etc. as appropriate.
+
+==================================================
+26. DESIGN QUALITY REQUIREMENT
+==================================================
+
+THIS IS THE MOST IMPORTANT PART.
+
+Before writing code, think like a professional luxury brand designer.
+
+The final website should feel like a brand that could eventually sell:
+
+PKR 4,000–10,000+ premium fragrances.
+
+It should NOT look like a student project.
+
+It should NOT look like a template generated in 5 minutes.
+
+Use sophisticated editorial composition.
+
+Create visual hierarchy.
+
+Use typography intentionally.
+
+Use whitespace intentionally.
+
+Use gold sparingly.
+
+Use imagery as a major part of the experience.
+
+Make the website feel expensive without making it visually complicated.
+
+==================================================
+27. IMPORTANT BRAND DETAILS
+==================================================
+
+Brand:
+
+SIDR & MEHR
+
+Username:
+
+@sidrmehr
+
+Primary tagline:
+
+TIMELESS. DISTINCT. UNMISTAKABLE.
+
+Secondary line:
+
+Fragrance · Accessories · LifeStyle
+
+Brand philosophy:
+
+Rooted in tradition, made for today.
+
+Current focus:
+
+Fragrances
+
+Initial collection:
+
+5 fragrances
+
+Bottle size:
+
+50ml
+
+Ordering:
+
+WhatsApp
+
+WhatsApp number:
+
+NEXT_PUBLIC_WHATSAPP_NUMBER=923237814688
+
+Future:
+
+Accessories
+Caps
+Complete ecommerce
+Online payments
+Backend
+Customer accounts
+Order management
+
+Do NOT build those future systems now.
+
+==================================================
+28. WHAT I NEED FROM YOU
+==================================================
+
+I am using an EMPTY Next.js project.
+
+I do NOT need you to deploy the website.
+
+I do NOT need Python scripts.
+
+I do NOT need shell scripts that generate files.
+
+I do NOT need pseudo-code.
+
+I do NOT need incomplete snippets.
+
+I need the ACTUAL SOURCE CODE.
+
+Your response must contain the complete project implementation.
+
+First provide:
+
+1. Final folder/file structure
+
+Then provide every required file.
+
+For every file use this exact format:
+
+FILE:
+src/app/page.tsx
+
+```tsx
+[COMPLETE CODE]
+
+Then:
+
+FILE:
+src/components/layout/Navbar.tsx
+
+[COMPLETE CODE]
+
+Continue until every required file is provided.
+
+==================================================
+29. CRITICAL — DO NOT OMIT FILES
+
+Do NOT say:
+
+"and so on"
+
+"remaining files are similar"
+
+"you can create the rest"
+
+"implement this yourself"
+
+"etc."
+
+Every required file must be provided.
+
+If the response becomes too long, split the implementation into clearly numbered batches:
+
+BATCH 1
+Configuration + global styles
+
+BATCH 2
+Layout + navigation
+
+BATCH 3
+Homepage
+
+BATCH 4
+Products
+
+BATCH 5
+About + Contact
+
+BATCH 6
+SEO + final configuration
+
+But DO NOT omit any code.
+
+==================================================
+30. DEPENDENCIES
+
+Keep dependencies minimal.
+
+If you require a package, explicitly list it at the beginning.
+
+Provide the final package.json.
+
+Do not use unnecessary UI libraries.
+
+Tailwind CSS should handle most styling.
+
+If you use an animation library, explain why and include it in package.json.
+
+==================================================
+31. ENVIRONMENT
+
+Provide:
+
+.env.example
+
+with:
+
+NEXT_PUBLIC_WHATSAPP_NUMBER=923237814688
+
+Also explain exactly what I should put in my local .env.local file.
+
+Never expose secret keys in frontend code.
+
+==================================================
+32. FINAL VALIDATION
+
+Before finishing, mentally verify:
+
+All imports resolve
+All referenced files exist
+No component is missing
+No broken internal links
+No undefined variables
+No TypeScript errors
+No invalid Tailwind classes
+No missing dependencies
+No broken image paths
+Mobile navigation works
+WhatsApp buttons work
+Dynamic product routes work
+Environment variable is used correctly
+Navbar works
+Footer works
+All pages are responsive
+
+The code must be compatible with a modern stable Next.js + TypeScript project.
+
+==================================================
+33. FINAL VISUAL CHECK
+
+The most important requirement:
+
+DO NOT reproduce a simple website consisting of:
+
+navbar
++
+left text
++
+right image
++
+five cards
++
+footer.
+
+That design was already rejected.
+
+Instead produce a highly polished luxury fragrance experience with:
+
+editorial hero
+sophisticated typography
+premium imagery
+dark and ivory sections
+gold accents
+asymmetric layouts
+product storytelling
+strong whitespace
+refined hover effects
+elegant transitions
+premium mobile experience
+
+The website should immediately communicate:
+
+"LUXURY FRAGRANCE BRAND"
+
+within the first few seconds.
+
+==================================================
+34. RESPONSE ORDER
+
+Your response MUST follow this order:
+
+Short architecture overview
+Final folder structure
+Required dependencies
+package.json
+Configuration files
+Global styles
+Layout
+Navbar
+Footer
+Reusable UI components
+Homepage
+Product data
+Product components
+Product detail page
+About page
+Contact page
+SEO / metadata
+Environment file
+Final setup instructions
+Final verification checklist
+
+Do not start coding until you have internally planned the architecture.
+
+Do not ask me unnecessary questions.
+
+Make reasonable professional design decisions yourself.
+
+The goal is to produce the BEST POSSIBLE FIRST VERSION of SIDR & MEHR.
+
+START NOW.
