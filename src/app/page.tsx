@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <BrandStory />
       <FeaturedCollection />
+      <BrandStory />
       <PhilosophySection />
       <BeyondFragrance />
       <FinalCta />
