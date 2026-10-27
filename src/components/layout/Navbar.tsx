@@ -39,7 +39,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                     <Link
                         href="/"
-                        className="flex items-center group"
+                        className="group flex items-center gap-3"
                         aria-label={`${siteConfig.name} — Home`}
                     >
                         <div
@@ -57,22 +57,33 @@ export function Navbar() {
                                 priority
                             />
                         </div>
+                        <span className="hidden font-serif text-sm tracking-[0.18em] text-gold transition-colors duration-300 group-hover:text-gold-light sm:block">
+                            SIDR <span className="text-gold/60">&amp;</span> MEHR
+                        </span>
                     </Link>
 
                     <nav className="hidden lg:flex items-center gap-10" aria-label="Main">
                         {navItems.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={cn(
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    aria-current={
+                                        pathname === item.href ||
+                                        (item.href !== '/' && pathname.startsWith(`${item.href}/`))
+                                            ? 'page'
+                                            : undefined
+                                    }
+                                    className={cn(
                                     'relative text-[11px] tracking-[0.2em] uppercase transition-colors duration-300',
-                                    pathname === item.href
+                                    pathname === item.href ||
+                                    (item.href !== '/' && pathname.startsWith(`${item.href}/`))
                                         ? 'text-gold'
                                         : 'text-ivory/70 hover:text-ivory'
                                 )}
                             >
                                 {item.label}
-                                {pathname === item.href && (
+                                {(pathname === item.href ||
+                                    (item.href !== '/' && pathname.startsWith(`${item.href}/`))) && (
                                     <span className="absolute -bottom-1 left-0 right-0 h-px bg-gold/60" />
                                 )}
                             </Link>

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Container } from '@/components/ui/Container'
 import { siteConfig } from '@/config/site'
+import { createWhatsAppLink } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
   title: 'Our Story',
@@ -55,6 +57,20 @@ export default function AboutPage() {
                 new—with honesty, passion, and respect for the art of perfume.
               </p>
             </div>
+            <div className="grid grid-cols-3 gap-4 border-t border-charcoal/15 pt-6 text-center sm:gap-8">
+              <div>
+                <p className="font-serif text-2xl !text-gold-dark">01</p>
+                <p className="mt-1 text-[9px] uppercase tracking-[0.16em] !text-charcoal/55">Clear standard</p>
+              </div>
+              <div>
+                <p className="font-serif text-2xl !text-gold-dark">05</p>
+                <p className="mt-1 text-[9px] uppercase tracking-[0.16em] !text-charcoal/55">First compositions</p>
+              </div>
+              <div>
+                <p className="font-serif text-2xl !text-gold-dark">∞</p>
+                <p className="mt-1 text-[9px] uppercase tracking-[0.16em] !text-charcoal/55">Room to grow</p>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
@@ -87,26 +103,20 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="lg:col-span-5">
-              <div className="aspect-square border border-gold/15 flex flex-col items-center justify-center text-center p-10 bg-[#1A1918]">
-                <div className="w-16 h-16 border border-gold/30 rounded-full flex items-center justify-center mb-6">
-                  <svg
-                    className="w-7 h-7 text-gold/80"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.2}
-                      d="M12 3c.5 2.5 1.5 4.5 3 6.5 1 1.3 2 2.5 2.5 4-.5 1.5-1.5 2.5-3 3.5-1.5 1-3 1.5-4.5 1.5s-3-.5-4.5-1.5c-1.5-1-2.5-2-3-3.5.5-1.5 1.5-2.7 2.5-4C9.5 7.5 10.5 5.5 11 3z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-serif text-gold mb-2">The Sidr Tree</h3>
+              <div className="relative aspect-square overflow-hidden border border-gold/15 bg-[#1A1918] p-10 text-center">
+                <Image
+                  src="/brand/monogram.png"
+                  alt="SIDR & MEHR monogram"
+                  fill
+                  sizes="(max-width: 1024px) 80vw, 360px"
+                  className="object-contain p-16 opacity-80"
+                />
+                <div className="relative z-10 flex h-full flex-col items-center justify-end">
+                  <h3 className="mb-2 font-serif text-xl text-gold">The Sidr Tree</h3>
                 <p className="text-xs text-muted leading-relaxed max-w-[200px]">
                   Resilience · Purity · Timeless presence
                 </p>
+                </div>
               </div>
             </div>
           </div>
@@ -166,7 +176,7 @@ export default function AboutPage() {
               elegance. Join us on this journey.
             </p>
             <a
-              href={`https://wa.me/${siteConfig.links.whatsapp}?text=${encodeURIComponent('Hello SIDR & MEHR, I would like to know more about your brand.')}`}
+              href={createWhatsAppLink('Hello SIDR & MEHR, I would like to know more about your brand.')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase bg-gold text-charcoal hover:bg-gold-light transition-all duration-500"

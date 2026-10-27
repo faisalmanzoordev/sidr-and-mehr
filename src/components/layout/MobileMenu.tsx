@@ -80,9 +80,16 @@ export function MobileMenu() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
+                aria-current={
+                  pathname === item.href ||
+                  (item.href !== '/' && pathname.startsWith(`${item.href}/`))
+                    ? 'page'
+                    : undefined
+                }
                 className={cn(
                   'text-2xl font-serif tracking-wide transition-colors duration-300',
-                  pathname === item.href
+                  pathname === item.href ||
+                    (item.href !== '/' && pathname.startsWith(`${item.href}/`))
                     ? 'text-gold'
                     : 'text-ivory/90 hover:text-gold'
                 )}

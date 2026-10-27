@@ -3,6 +3,7 @@ import { Container } from '@/components/ui/Container'
 import { ProductGrid } from '@/components/products/ProductGrid'
 import { getAllProducts } from '@/data/products'
 import { siteConfig } from '@/config/site'
+import { createWhatsAppLink } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
   title: 'Fragrances',
@@ -15,12 +16,16 @@ export const metadata: Metadata = {
 
 export default function FragrancesPage() {
   const products = getAllProducts()
+  const recommendationHref = createWhatsAppLink(
+    'Hello SIDR & MEHR, I would like help choosing a fragrance.'
+  )
 
   return (
     <>
       <section className="pt-28 pb-14 md:pt-36 md:pb-16 bg-charcoal">
         <Container>
-          <div className="max-w-2xl">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+            <div className="max-w-2xl lg:col-span-8">
             <p className="eyebrow mb-5">The Collection</p>
             <h1 className="heading-display mb-6">Fragrances</h1>
             <div className="divider-gold mb-6" />
@@ -28,6 +33,17 @@ export default function FragrancesPage() {
               Each composition is crafted with intention—from deep woody ouds to
               bright citrus notes. Timeless scents for those who value character.
             </p>
+            </div>
+            <div className="grid grid-cols-2 gap-6 border-t border-ivory/[0.12] pt-5 lg:col-span-4 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+              <div>
+                <p className="font-serif text-3xl text-gold">05</p>
+                <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-muted">Compositions</p>
+              </div>
+              <div>
+                <p className="font-serif text-3xl text-gold">50ml</p>
+                <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-muted">Per bottle</p>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
@@ -47,7 +63,7 @@ export default function FragrancesPage() {
               preferences.
             </p>
             <a
-              href={`https://wa.me/${siteConfig.links.whatsapp}?text=${encodeURIComponent('Hello SIDR & MEHR, I would like help choosing a fragrance.')}`}
+              href={recommendationHref}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase bg-gold text-charcoal hover:bg-gold-light transition-all duration-500"

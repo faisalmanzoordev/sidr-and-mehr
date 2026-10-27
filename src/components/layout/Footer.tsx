@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { siteConfig, navItems } from '@/config/site'
 import { socialConfig } from '@/config/social'
 import { Container } from '@/components/ui/Container'
+import { createGeneralInquiryMessage, createWhatsAppLink } from '@/lib/whatsapp'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -13,13 +15,24 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
             {/* Brand */}
             <div className="md:col-span-5 space-y-5">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-serif text-gold tracking-wide">
-                  {siteConfig.name}
-                </h3>
+              <div className="flex items-center gap-4">
+                <div className="relative h-12 w-12 shrink-0">
+                  <Image
+                    src="/brand/monogram.png"
+                    alt=""
+                    fill
+                    sizes="48px"
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl tracking-wide text-gold md:text-3xl">
+                    {siteConfig.name}
+                  </h3>
                 <p className="mt-2 text-[11px] tracking-[0.25em] uppercase text-gold/70">
                   {siteConfig.tagline}
                 </p>
+                </div>
               </div>
               <p className="text-sm text-muted leading-relaxed max-w-sm">
                 {siteConfig.brandLine}
@@ -27,6 +40,14 @@ export function Footer() {
               <p className="text-sm text-ivory/50 leading-relaxed max-w-sm">
                 {siteConfig.philosophy}
               </p>
+              <a
+                href={createWhatsAppLink(createGeneralInquiryMessage())}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 pt-2 text-[10px] uppercase tracking-[0.2em] text-gold transition-colors duration-300 hover:text-gold-light"
+              >
+                Start a conversation <span aria-hidden="true">↗</span>
+              </a>
             </div>
 
             {/* Navigate */}
@@ -54,7 +75,7 @@ export function Footer() {
               </h4>
               <div className="flex flex-col gap-3">
                 <a
-                  href={`https://wa.me/${socialConfig.links.whatsapp}`}
+                  href={createWhatsAppLink(createGeneralInquiryMessage())}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted hover:text-gold transition-colors duration-300"

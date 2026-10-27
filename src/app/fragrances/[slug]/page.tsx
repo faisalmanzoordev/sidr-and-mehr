@@ -12,6 +12,7 @@ import {
 } from '@/data/products'
 import { formatPrice } from '@/lib/utils'
 import { siteConfig } from '@/config/site'
+import { createWhatsAppLink } from '@/lib/whatsapp'
 
 export async function generateStaticParams() {
     const products = getAllProducts()
@@ -57,7 +58,7 @@ export default async function ProductPage({
     }
 
     const relatedProducts = getRelatedProducts(product.id)
-    const whatsappMessage = encodeURIComponent(
+    const whatsappHref = createWhatsAppLink(
         `Hello SIDR & MEHR,\n\nI am interested in:\n${product.name}\nSize: ${product.size}\n\nPlease share availability and order details.`
     )
 
@@ -65,9 +66,20 @@ export default async function ProductPage({
         <>
             <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-charcoal">
                 <Container>
+                    <nav aria-label="Breadcrumb" className="mb-10 md:mb-14">
+                        <ol className="flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-muted">
+                            <li>
+                                <Link href="/fragrances" className="transition-colors hover:text-gold">
+                                    Collection
+                                </Link>
+                            </li>
+                            <li aria-hidden="true" className="text-gold/50">/</li>
+                            <li className="text-ivory/60">{product.name}</li>
+                        </ol>
+                    </nav>
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                         <div className="space-y-5">
-                            <div className="product-visual border border-ivory/[0.06]">
+                            <div className="product-visual border border-ivory/[0.06] shadow-2xl shadow-black/20">
                                 <Image
                                     src={product.image}
                                     alt={product.name}
@@ -76,6 +88,10 @@ export default async function ProductPage({
                                     sizes="(max-width: 1024px) 100vw, 50vw"
                                     priority
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent" />
+                                <p className="absolute bottom-5 left-5 text-[10px] uppercase tracking-[0.25em] text-ivory/70">
+                                    SIDR &amp; MEHR / {String(product.order).padStart(2, '0')}
+                                </p>
                             </div>
                             <div className="flex items-center justify-between">
                                 <span className="text-[11px] tracking-[0.3em] text-gold font-medium">
@@ -96,6 +112,9 @@ export default async function ProductPage({
                                 )}
                                 <h1 className="heading-hero text-ivory">{product.name}</h1>
                                 <div className="divider-gold" />
+                                <p className="max-w-md text-base italic leading-relaxed text-ivory/55">
+                                    {product.shortDescription}
+                                </p>
                             </div>
 
                             <div>
@@ -147,7 +166,7 @@ export default async function ProductPage({
 
                             <div className="flex flex-col sm:flex-row gap-3 pt-4">
                                 <a
-                                    href={`https://wa.me/${siteConfig.links.whatsapp}?text=${whatsappMessage}`}
+                                    href={whatsappHref}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex-1"

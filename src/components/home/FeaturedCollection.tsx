@@ -20,10 +20,10 @@ export function FeaturedCollection() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 md:mb-16"
+          className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between"
         >
           <div>
-            <p className="eyebrow mb-4">The Collection</p>
+            <p className="eyebrow mb-4">The collection / 01—05</p>
             <h2 className="heading-xl">Featured Fragrances</h2>
           </div>
           <p className="body-base text-muted max-w-sm md:text-right">
@@ -31,7 +31,7 @@ export function FeaturedCollection() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+        <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-10 lg:gap-y-16">
           {featuredProducts.map((product, index) => (
             <motion.div
               key={product.id}
@@ -42,6 +42,7 @@ export function FeaturedCollection() {
                 delay: index * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
+              className={index === 0 ? 'lg:col-span-2' : 'lg:col-span-1'}
             >
               <ProductCard product={product} priority={index < 2} />
             </motion.div>
